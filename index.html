@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кулинария</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <header class="header">
+        <div class= "head-container">
+            <img class="logo" src="images/Recipes.svg" width="99" height="29">
+            <ul class ="menu-list">
+                <li class="menu-item menu-item--active">Главная</li>
+                <li class="menu-item">Рецепты</li>
+                <li class="menu-item">Избранное</li>
+            </ul>
+        </div>
+        <div class="logo-entrance">
+            <div class="circle"><img src="images/man.svg"></div>
+            <a class="bt" onclick="openSection('form-choice')">Войти</a>
+        </div>
+        <div class="body-header">
+            <div class="text">
+                <h1 class="text text--big">
+                    Готовь и делись<br/> рецептами
+                </h1>
+                <p>
+                    Никаких кулинарных книг и блокнотов! Храни все <br/>
+                    любимые рецеты в одном месте
+                </p>
+                <p></p>
+            </div>
+            <div class="bt-container">
+                <a class="button button--addrecipe">
+                    + Добавить рецепт
+                </a>
+                <a class="button">
+                    Войти
+                </a>
+            </div>
+            <div>
+                <img src="images/Rectangle 1.jpg" class="image-main">
+            </div>
+        </div>
+        <div id="form-choice" class="content">
+                <form>
+                    <div class="end">
+                        <a class="bt bt--form" onclick="closeSection()">x</a>
+                    </div>
+                    
+                    <h1 class="text-form">Войдите в профиль</h1>
+                    <p class="text-form">Добавить рецепт могут только зарегестрированные<br/>
+                        пользователи</p>
+                    
+                    <div class="bt-container-form">
+                        <a class="button button--addrecipe" onclick="openSection('form-enter')">
+                            Войти
+                        </a>
+                        <a class="button" onclick="openSection('form-registration')">
+                            Регистрация
+                        </a>
+                    </div>
+                </form>
+        </div>
+        <div id="form-registration" class="content">
+            <form class="formRegistration">
+                <div class="end">
+                    <a class="bt bt--form" onclick="closeSection()">x</a>
+                </div>
+                <h1>Регистрация</h1>
+                <input type="text" size="70" placeholder="Имя" class="search search--name">
+                <input type="text" size="70" placeholder="Логин" class="search search--lg">
+                <input type="text" size="70" placeholder="Пароль" class="search search--password">
+                <input type="text" size="70" placeholder="Повторите пароль" class="search search--password-confirmation">
+                    <div class="bt-container">
+                        <a class="button button--addrecipe" onclick="valid()">
+                            Зарегистрироваться
+                        </a>
+                        <a class="button" onclick="openSection('form-choice')">
+                            Отмена
+                        </a>
+                    </div>
+                    <a class="bt" onclick="openSection('form-enter')">
+                        У меня уже есть аккаунт
+                    </a>
+            </form>
+        </div> 
+        <div id="form-enter" class="content">
+            <form>
+                <div class="end">
+                    <a class="bt bt--form" onclick="closeSection()">x</a>
+                </div>
+                <h1>Войти</h1>
+                <input type="text" size="70" placeholder="Логин" class="search">
+                <input type="text" size="70" placeholder="Пароль" class="search">
+                    <div class="bt-container">
+                        <a class="button button--addrecipe">
+                            Войти
+                        </a>
+                        <a class="button" onclick="openSection('form-choice')">
+                            Отмена
+                        </a>
+                    </div>
+                    <a class="bt" onclick="openSection('form-registration')">
+                        У меня ещё нет аккаунта
+                    </a>
+            </form>
+        </div>       
+    </header>
+        <main>
+            <div class="main-container">
+                <div class="text">
+                    <h1 class="text text--medium">
+                        Умная сортировка
+                    </h1>
+                    <p>Добавляйте рецепты и указывайте наиболее популярные теги. Это позволит<br/>
+                        быстро находить любые категории</p>
+                </div>
+                <div class="container-rectangle">
+                    <div class="rectangle">
+                        <div class="rectangle rectangle--small">
+                            
+                            <img src="images/ic-menu.svg">
+                            
+                        </div>
+                        <h1>
+                            Простые блюда
+                        </h1>
+                        <p>Время приготвления таких блюд не более 1 часа</p>
+                    </div>
+                    <div class="rectangle">
+                        <div class="rectangle rectangle--small">
+                            
+                            <img src="images/childe.svg">
+                            
+                        </div>
+                        <h1>
+                            Детское
+                        </h1>
+                        <p>Самые полезные блюда которые можно детям любого возраста</p>
+                    </div>
+                    <div class="rectangle">
+                        <div class="rectangle rectangle--small">
+                            
+                            <img src="images/pov.svg">
+                            
+                        </div>
+                        <h1>
+                            От шеф-поваров
+                        </h1>
+                        <p>Требуют умения, времени и терпения, зато как в ресторане</p>
+                    </div>
+                    <div class="rectangle">
+                        <div class="rectangle rectangle--small">
+                            
+                            <img src="images/hol.svg">
+                            
+                        </div>
+                        <h1>
+                            На праздник
+                        </h1>
+                        <p>Чем удивить гостей, чтобы все были сыты за праздничным столом</p>
+                    </div>
+                </div>
+                <div class="recipe-container">
+                    <div class="product-picture"> 
+                        <img src="images/Rectangle 8.jpg">
+                    </div>
+                    <div class="like-time">
+
+                        <a class="counters" onclick="incrementClick()">
+                            <img src="images/like.svg"class="indent">
+                            <p id="label">0</p>  
+                        </a>
+                        <a class="counters">
+                            <img src="images/time.svg" class="indent">
+                            <p>35 минут</p>
+                        </a>
+                    </div>
+                    <div>
+                         <div class="word">
+                            <img src="images/wor.svg">
+                        </div> 
+                        <div class="smile-all">
+                            <img src="images/yummy.svg" class="smile">
+                        </div>
+                        <div class="text">
+                            <h1 class="text text--medium">
+                                Тыквенный супчик на кокосовом молоке
+                            </h1>
+                            <p>Если у вас осталась тыква, и вы не знаете что с ней<br/> сделать, то это решение для вас! 
+                                Ароматный,<br/> согревающий суп-пюре на кокосовом молоке. Можно<br/> даже в Пост! </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-recipes">
+                    <div class="center center--search-text">
+                        <div class="text text--pyramid">
+                            <h1 class="text text--medium">
+                                Поиск рецептов
+                            </h1>
+                            <p>Введите примерное название блюда, а мы по тегам найдем его </p>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <input type="text" size="70" placeholder="Название блюда..." class="search">
+                        <a class="button button--addrecipe">Найти</a>
+                    </div>
+                    <div class="text-input">
+                        <p class="text">Мясо   Деликатесы   Пироги   Рыба</p>
+                    </div>
+                </div>
+                
+            </div>
+
+        </main>
+        <footer>
+                <img class="logo" src="images/Recipes.svg" width="99" height="29">
+                <p>© Recipes 2021</p>
+
+        </footer>
+    
+</body>
+<script src="script/script.js"></script>
+</html>
